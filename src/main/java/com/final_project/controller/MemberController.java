@@ -16,7 +16,7 @@ import com.final_project.mapper.MemberMapper;
 import com.final_project.service.MailService;
 
 @Controller
-public class MemberController {  //김동욱 수정 되나요? 조예진 테스트
+public class MemberController {  //김동욱 수정 되나요? 조예진 테스트 신동엽 테스트
 
     @Autowired
     private MemberMapper memberMapper;
