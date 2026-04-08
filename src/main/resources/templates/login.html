@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | IT Control System</title>
+<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+<div class="page">
+  <div class="wrap">
+
+    <h1>Login</h1>
+    <div class="sub">IT Control System에 오신 것을 환영합니다</div>
+
+    <form class="local-login" action="/loginProc" method="post">
+      <div class="input-group">
+        <label for="username">아이디</label>
+        <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+      </div>
+      <div class="input-group">
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+      </div>
+      <button type="submit" class="btn-login">로그인</button>
+      
+      <div class="account-helper">
+		<div class="helper-item">
+		  아직 계정이 없으신가요? <a href="/join">회원가입</a>
+		</div>
+		<div class="helper-item secondary">
+		   비밀번호를 잊으셨나요? <a href="/forgot-password">비밀번호 재설정</a>
+		</div>
+	  </div>
+    </form>
+
+    <div class="divider">
+      <span>또는 소셜 계정으로 로그인</span>
+    </div>
+
+    <div class="login-menu">
+      <div class="card" onclick="location.href='/oauth2/authorization/kakao'">
+        <h3>카카오</h3>
+        <p>Kakao 로그인</p>
+      </div>
+
+      <div class="card" onclick="location.href='/oauth2/authorization/google'">
+        <h3>구글</h3>
+        <p>Google 로그인</p>
+      </div>
+
+      <div class="card" onclick="location.href='/oauth2/authorization/naver'">
+        <h3>네이버</h3>
+        <p>Naver 로그인</p>
+      </div>
+
+      <div class="card" onclick="location.href='/oauth2/authorization/github'">
+        <h3>깃허브</h3>
+        <p>GitHub 로그인</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      © IT Control System
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

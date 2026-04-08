@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main</title>
+  <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<body>
+  <div class="page">
+    <div class="wrap">
+      <h1>Main</h1>
+      <div class="welcome">
+        환영합니다, <strong th:text="${session.sid}"></strong> 님 👋
+      </div>
+
+      <div class="badge">메인 메뉴</div>
+
+      <div class="menu">
+        <div class="card" onclick="location.href='/mypage'">
+          <h3>내 정보</h3>
+          <p>회원 정보 조회 및 수정</p>
+        </div>
+        <div class="card" onclick="location.href='/api/test'">
+          <h3>채팅</h3>
+          <p>현재 가능한 채팅 확인</p>
+        </div>
+        <div class="card" onclick="location.href='/board/list'">
+          <h3>게시판</h3>
+          <p>최신 공지 및 지식 공유</p>
+        </div>
+        <div class="card" onclick="location.href='#'">
+          <h3>포트폴리오</h3>
+          <p>제출한 자료 관리</p>
+        </div>
+        <div class="card" onclick="location.href='#'">
+          <h3>Q&A</h3>
+          <p>질의응답</p>
+        </div>
+        <div class="card" onclick="location.href='#'">
+          <h3>알림</h3>
+          <p>알림 설정</p>
+        </div>
+      </div>
+
+      <div class="section-title">오늘의 안내</div>
+      <div class="info-box">
+        ✔ 현재 참여 가능한 스터디 모임이 <strong>3개</strong> 있습니다.<br />
+        ✔ 다음 정기 모임 일정은 <strong>2026-01-20</strong> 입니다.<br />
+        ✔ 프로필 정보가 최신 상태인지 확인해 주세요.
+      </div>
+
+      <div class="btns">
+        <button class="btn btn-mypage" onclick="location.href='/mypage'">내 정보</button>
+        <button class="btn btn-logout" onclick="location.href='/logout'">로그아웃</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

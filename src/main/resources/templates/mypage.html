@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마이페이지</title>
+<link rel="stylesheet" th:href="@{/css/mypage.css}">
+</head>
+
+<body>
+<div class="page">
+  <div class="wrap">
+
+    <h1>My Page</h1>
+
+    <div class="welcome">
+      <strong th:text="${nickname}"></strong> 님의 정보입니다 👋
+    </div>
+
+    <div class="badge">회원 정보</div>
+
+    <div class="profile-card">
+      <img th:src="${profileImage}" alt="프로필 이미지">
+      <h3 th:text="${nickname}"></h3>
+      <p th:text="${email}"></p>
+    </div>
+
+    <div class="section-title">안내</div>
+    <div class="info-box">
+      ✔ 프로필 정보는 항상 최신 상태로 유지해주세요.<br/>
+      ✔ 닉네임 및 프로필 이미지는 언제든 수정 가능합니다.<br/>
+      ✔ 계정 보안을 위해 주기적으로 확인해주세요.
+    </div>
+
+    <div class="btns">
+      <button class="btn btn-main" onclick="location.href='/home'">메인으로</button>
+      <button class="btn btn-edit" onclick="location.href='member/edit'">정보 수정</button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
