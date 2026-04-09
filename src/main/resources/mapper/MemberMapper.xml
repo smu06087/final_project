@@ -6,7 +6,7 @@
 <mapper namespace="com.final_project.mapper.MemberMapper">
 
     <insert id="insertMember">
-	    INSERT INTO minionmember (
+	    INSERT INTO member (
 	        mno, 
 	        provider_id, 
 	        password,
@@ -35,12 +35,12 @@
 	        nickname, 
 	        email, 
 	        role,              registration_id AS registrationId
-	    FROM minionmember 
+	    FROM member 
 	    WHERE provider_id = #{providerId}
 	</select>
 	
 	<update id="updateMember">
-	    UPDATE minionmember 
+	    UPDATE member 
 	    SET 
 	        password = #{password, jdbcType=VARCHAR},
 	        nickname = #{nickname},
